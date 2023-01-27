@@ -25,6 +25,7 @@ model Habit {
   @@map("habits")
 }
 
+// Which habits are availables in which weekday
 model HabitWeekDays {
   id       String @id @default(uuid())
   habit_id String
@@ -46,6 +47,7 @@ model Day {
   @@map("days")
 }
 
+// table with all completed habits
 model DayHabit {
   id String @id @default(uuid())
 
