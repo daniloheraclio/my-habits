@@ -2,9 +2,9 @@ interface ProgressBarProps {
   progress: number;
 }
 
-export function ProgressBar(props: ProgressBarProps) {
+export function ProgressBar({ progress }: ProgressBarProps) {
   const progressStyles = {
-    width: `${props.progress}%`,
+    width: `${progress}%`,
   };
 
   return (
@@ -12,7 +12,7 @@ export function ProgressBar(props: ProgressBarProps) {
       <div
         role="progressbar"
         aria-label="Habit progress completed that day"
-        aria-valuenow={props.progress}
+        aria-valuenow={progress}
         className="h-3 rounded-xl bg-violet-600"
         style={progressStyles}
       ></div>
