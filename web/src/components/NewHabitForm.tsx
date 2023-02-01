@@ -20,7 +20,7 @@ export function NewHabitForm() {
   async function createNewHabit(event: FormEvent) {
     event.preventDefault();
 
-    if (!title || !weekDays.length) {
+    if (!title || weekDays.length === 0) {
       return;
     }
     await api.post('habits', {
